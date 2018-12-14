@@ -9,8 +9,15 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("havanese/user")
 public class UserCenterController {
-    @RequestMapping("/usercenter")
-    private String goToCurrentPage(){
-       return "user/index";
+    @RequestMapping("/tabpublished")
+    private String selectPubPage(){
+       return "user/mypublished";
+    }
+
+    @RequestMapping("/tabcollected")
+    private String selectColPage(){
+        return "user/mycollected";
     }
 }
+
+
