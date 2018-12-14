@@ -11,13 +11,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * Created by Administrator on 2018/12/8 0008.
  */
 @Controller
+@RequestMapping("havanese")
 public class TestController {
 
     @Autowired
     private ITestService testService;
 
 
-    @RequestMapping("/hello")
+    @RequestMapping("/home")
     public String getMsg(){
         return "index";
     }
