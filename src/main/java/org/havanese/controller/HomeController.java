@@ -9,4 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("havanese")
 public class HomeController {
+    @RequestMapping("home")
+    private String goToCurrentPage(){
+        return "index";
+    }
 }

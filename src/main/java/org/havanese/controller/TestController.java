@@ -18,7 +18,7 @@ public class TestController {
     private ITestService testService;
 
 
-    @RequestMapping("/home")
+    @RequestMapping("")
     public String getMsg(){
         return "index";
     }
