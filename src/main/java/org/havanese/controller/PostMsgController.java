@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
  * Created by Administrator on 2018/12/14 0014.
  */
 @Controller
-@RequestMapping("havanese/user")
+@RequestMapping("havanese")
 public class PostMsgController {
     @RequestMapping("postmsg")
     private String goToCurrentPage(){
