@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.ResponseBody;
  *
  */
 @Mapper
-
 public interface UserMapper {
     @Select("select * from user where name=#{name}")
     User findUserById(@Param("name") String name);

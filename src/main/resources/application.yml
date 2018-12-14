@@ -1,6 +1,13 @@
 server:
   port: 8080
 spring:
+#  resources:
+#    chain:
+#      strategy:
+#        content:
+#          enabled: true
+#          paths: /**
+
   datasource:
     url: jdbc:mysql://127.0.0.1:3306/havanese?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8
     username: root
@@ -8,8 +15,16 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 
 
+
   thymeleaf:
     cache: false
+#    prefix: classpath:/templates/html/
+#    suffix: .html
+#    mode: HTML5
+#    encoding: utf-8
+#    content-type: text/html
+#
+
 
 
 

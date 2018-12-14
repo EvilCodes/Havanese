@@ -18,14 +18,7 @@ public class TestController {
 
 
     @RequestMapping("/hello")
-    @ResponseBody
-    public User getMsg(String name){
-        System.out.print("进入方法name="+name);
-        User user = null;
-        if (null != name && !"".equals(name)) {
-            user = testService.findUserByName(name);
-            System.out.println(user.toString());
-        }
-        return user;
+    public String getMsg(){
+        return "index";
     }
 }
