@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class UserCenterController {
     @RequestMapping("/usercenter")
     private String goToCurrentPage(){
-       return "user/index.html";
+       return "user/index";
     }
 }
