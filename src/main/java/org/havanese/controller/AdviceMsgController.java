@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AdviceMsgController {
     @RequestMapping("advice")
     private String goToCurrentPage(){
-        return "jie/index";
+        return "jie/advice";
     }
 }

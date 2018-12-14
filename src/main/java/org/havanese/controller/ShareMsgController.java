@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class ShareMsgController {
     @RequestMapping("sharemsg")
     private String goToCurrentPage(){
-        return "jie/index";
+        return "jie/sharemsg";
     }
 
 

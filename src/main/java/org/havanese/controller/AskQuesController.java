@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AskQuesController {
     @RequestMapping("askques")
     private String goToCurrentPage(){
-        return "jie/index";
+        return "jie/askques";
     }
 }

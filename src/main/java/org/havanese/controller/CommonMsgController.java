@@ -11,6 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CommonMsgController {
     @RequestMapping("announcement")
     private String goToCurrentPage(){
-        return "jie/index";
+        return "jie/announcement";
     }
 }

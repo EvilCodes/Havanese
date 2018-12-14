@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class DynamicMsgController {
     @RequestMapping("dynamic")
     private String goToCurrentPage(){
-        return "jie/index";
+        return "jie/dynamic";
     }
 
 }
