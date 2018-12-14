@@ -9,4 +9,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("havanese")
 public class GetDetailMsgController {
+    @RequestMapping("getdetail")
+    private String goToCurrentPage(){
+        return "jie/detail";
+    }
 }
