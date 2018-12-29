@@ -15,4 +15,26 @@ public class ShareMsgController {
     }
 
 
+    @RequestMapping("sharemsg/unliquidated")
+    private  String  goToUnliquidated(){
+        return "subtabpage/sharemsg/unliquidated";
+
+    }
+
+    @RequestMapping("sharemsg/synthesis")
+    private String goToSynthesis(){
+        return "subtabpage/sharemsg/synthesis";
+    }
+
+    @RequestMapping("sharemsg/payamount")
+    private String goToPayamount(){
+        return "subtabpage/sharemsg/payamount";
+    }
+
+    @RequestMapping("sharemsg/essence")
+    private String goToEssence(){
+        return "subtabpage/sharemsg/essence";
+    }
+
+
 }
