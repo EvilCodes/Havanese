@@ -13,4 +13,10 @@ public class AskQuesController {
     private String goToCurrentPage(){
         return "jie/askques";
     }
+
+
+
+
+
+
 }
