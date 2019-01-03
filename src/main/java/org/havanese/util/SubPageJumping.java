@@ -8,7 +8,7 @@ public class SubPageJumping {
 
     public final static String BASE_PATH_DESC = "subtabpage";
 
-    public static String EssencePageDesc(String baseDesc){
+    public static String essencePageDesc(String baseDesc){
         String pathDesc=null;
 
         if (baseDesc != null && !baseDesc.equals("")) {
