@@ -1,7 +1,8 @@
-package org.havanese.service;
+package org.havanese.service.impl;
 
 import org.havanese.mapper.UserMapper;
 import org.havanese.pojo.User;
+import org.havanese.service.ITestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -9,7 +10,7 @@ import org.springframework.stereotype.Service;
  * Created by Administrator on 2018/12/8 0008.
  */
 @Service
-public class TestServiceImpl implements ITestService{
+public class TestServiceImpl implements ITestService {
 
     @Autowired
     private UserMapper mapper;
