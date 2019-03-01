@@ -13,4 +13,11 @@ public class RegisterController {
     private String goToCurrentPage(){
         return "user/reg";
     }
+
+
+//    @RequestMapping("")
+
+
+
+
 }

@@ -15,7 +15,11 @@ public interface UserMapper {
     @Select("select * from user where name=#{name}")
     User findUserById(@Param("name") String name);
 
-    @Insert("insert into user (name,age) values(#{name},#{age})")
-    boolean insertUsers(@Param("name") String name,@Param("ageg") int age);
+//    @Insert("insert into user (name,age) values(#{name},#{age})")
+//    boolean insertUsers(@Param("name") String name,@Param("ageg") int age);
+
+    @Insert("insert into user ")
+    boolean insertUser();
 
 }
+
