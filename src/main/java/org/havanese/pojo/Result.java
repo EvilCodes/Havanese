@@ -7,25 +7,25 @@ import java.io.Serializable;
  * @desc 用于传输数据的dto
  */
 public class Result implements Serializable{
-    private int code_status;
-    private String result_desc;
+    private int codeStatus;
+    private String resultDesc;
     private Object data;
 
 
-    public int getCode_status() {
-        return code_status;
+    public int getCodeStatus() {
+        return codeStatus;
     }
 
-    public void setCode_status(int code_status) {
-        this.code_status = code_status;
+    public void setCodeStatus(int codeStatus) {
+        this.codeStatus = codeStatus;
     }
 
-    public String getResult_desc() {
-        return result_desc;
+    public String getResultDesc() {
+        return resultDesc;
     }
 
-    public void setResult_desc(String result_desc) {
-        this.result_desc = result_desc;
+    public void setResultDesc(String resultDesc) {
+        this.resultDesc = resultDesc;
     }
 
     public Object getData() {
@@ -39,8 +39,8 @@ public class Result implements Serializable{
     @Override
     public String toString() {
         return "Result{" +
-                "code_status=" + code_status +
-                ", result_desc='" + result_desc + '\'' +
+                "codeStatus=" + codeStatus +
+                ", resultDesc='" + resultDesc + '\'' +
                 ", data=" + data +
                 '}';
     }

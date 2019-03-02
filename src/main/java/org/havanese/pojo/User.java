@@ -11,10 +11,10 @@ public class User implements Serializable{
     private String email;
     private String nick;
     private String password;
-    private Date register_date;
-    private String user_avatar;
+    private Date registerDate;
+    private String userAvatar;
     private String signature;
-    private int email_status;
+    private int emailStatus;
 
     public int getId() {
         return id;
@@ -48,21 +48,6 @@ public class User implements Serializable{
         this.password = password;
     }
 
-    public Date getRegister_date() {
-        return register_date;
-    }
-
-    public void setRegister_date(Date register_date) {
-        this.register_date = register_date;
-    }
-
-    public String getUser_avatar() {
-        return user_avatar;
-    }
-
-    public void setUser_avatar(String user_avatar) {
-        this.user_avatar = user_avatar;
-    }
 
     public String getSignature() {
         return signature;
@@ -72,12 +57,28 @@ public class User implements Serializable{
         this.signature = signature;
     }
 
-    public int getEmail_status() {
-        return email_status;
+    public Date getRegisterDate() {
+        return registerDate;
     }
 
-    public void setEmail_status(int email_status) {
-        this.email_status = email_status;
+    public void setRegisterDate(Date registerDate) {
+        this.registerDate = registerDate;
+    }
+
+    public String getUserAvatar() {
+        return userAvatar;
+    }
+
+    public void setUserAvatar(String userAvatar) {
+        this.userAvatar = userAvatar;
+    }
+
+    public int getEmailStatus() {
+        return emailStatus;
+    }
+
+    public void setEmailStatus(int emailStatus) {
+        this.emailStatus = emailStatus;
     }
 
     @Override
@@ -87,10 +88,10 @@ public class User implements Serializable{
                 ", email='" + email + '\'' +
                 ", nick='" + nick + '\'' +
                 ", password='" + password + '\'' +
-                ", register_date=" + register_date +
-                ", user_avatar='" + user_avatar + '\'' +
+                ", registerDate=" + registerDate +
+                ", userAvatar='" + userAvatar + '\'' +
                 ", signature='" + signature + '\'' +
-                ", email_status=" + email_status +
+                ", emailStatus=" + emailStatus +
                 '}';
     }
 }
