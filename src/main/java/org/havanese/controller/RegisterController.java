@@ -32,7 +32,7 @@ public class RegisterController {
         if (EstimateObjectUtil.estimateObject(registerEntity)&&EstimateObjectUtil.verifyRegisterEntity(registerEntity,request)) {
            isSuccessed= loginAndRegister.register(registerEntity);
             if (isSuccessed) {
-                    jumpPath = "redirect:/havanese/home";
+                    jumpPath = "redirect:/";
             }
         }
         return jumpPath;
