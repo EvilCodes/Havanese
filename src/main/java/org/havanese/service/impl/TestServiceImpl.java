@@ -19,13 +19,14 @@ public class TestServiceImpl implements ITestService {
     @Override
     public boolean regUser(String name, int age) {
         boolean regFlag;
-//        if (null != name && age != 0) {
-//
+        if (null != name && age != 0) {
+
 //            regFlag = mapper.insertUsers(name, age);
-//
-//        } else {
-//            regFlag=false;
-//        }
+            regFlag=true;
+
+        } else {
+            regFlag=false;
+        }
         return regFlag;
     }
 

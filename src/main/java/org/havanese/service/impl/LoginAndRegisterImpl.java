@@ -38,5 +38,4 @@ public class LoginAndRegisterImpl implements ILoginAndRegister{
         return isSuccessed;
     }
 
-
 }

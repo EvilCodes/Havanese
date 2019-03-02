@@ -1,5 +1,8 @@
 package org.havanese.controller;
 
+import org.havanese.service.ILoginAndRegister;
+import org.havanese.service.impl.LoginAndRegisterImpl;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -9,15 +12,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("havanese/user")
 public class RegisterController {
+
+    @Autowired
+    ILoginAndRegister loginAndRegister;
+
     @RequestMapping("register")
     private String goToCurrentPage(){
         return "user/reg";
     }
 
-
-//    @RequestMapping("")
-
-
-
+    @RequestMapping("quickRegister")
+    private String register(){
+        System.out.print("进入quickRegister方法");
+        return "hello";
+    }
 
 }
