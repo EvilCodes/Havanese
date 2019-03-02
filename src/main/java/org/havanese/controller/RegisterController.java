@@ -1,10 +1,14 @@
 package org.havanese.controller;
 
+import org.havanese.dto.RegisterEntity;
 import org.havanese.service.ILoginAndRegister;
 import org.havanese.service.impl.LoginAndRegisterImpl;
+import org.havanese.util.EstimateObjectUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by Administrator on 2018/12/14 0014.
@@ -22,9 +26,16 @@ public class RegisterController {
     }
 
     @RequestMapping("quickRegister")
-    private String register(){
-        System.out.print("进入quickRegister方法");
-        return "hello";
+    private String register(RegisterEntity registerEntity, HttpServletRequest request){
+        boolean isSuccessed=false;
+        String jumpPath=null;
+        if (EstimateObjectUtil.estimateObject(registerEntity)&&EstimateObjectUtil.verifyRegisterEntity(registerEntity,request)) {
+           isSuccessed= loginAndRegister.register(registerEntity);
+            if (isSuccessed) {
+                    jumpPath = "redirect:/havanese/home";
+            }
+        }
+        return jumpPath;
     }
 
 }

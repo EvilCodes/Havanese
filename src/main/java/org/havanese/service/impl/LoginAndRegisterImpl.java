@@ -1,11 +1,14 @@
 package org.havanese.service.impl;
 
+import org.havanese.dto.RegisterEntity;
 import org.havanese.mapper.UserMapper;
 import org.havanese.pojo.User;
 import org.havanese.service.ILoginAndRegister;
 import org.havanese.util.EstimateObjectUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.Date;
 
 /**
  * Created by blackfox on 2019/3/2 0002.
@@ -19,9 +22,14 @@ public class LoginAndRegisterImpl implements ILoginAndRegister{
     UserMapper userMapper;
 
     @Override
-    public boolean register(User user) {
+    public boolean register(RegisterEntity registerEntity) {
         boolean isSuccessed=false;
-        if (EstimateObjectUtil.estimateObject(user)) {
+        if (EstimateObjectUtil.estimateObject(registerEntity)) {
+            User user=new User();
+            user.setEmail(registerEntity.getEmail());
+            user.setNick(registerEntity.getNick());
+            user.setPassword(registerEntity.getPassword());
+            user.setRegisterDate(new Date());
             isSuccessed=userMapper.insertUser(user);
         }
         return isSuccessed;

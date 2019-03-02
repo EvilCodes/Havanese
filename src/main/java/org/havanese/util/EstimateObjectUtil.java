@@ -1,5 +1,8 @@
 package org.havanese.util;
 
+import org.havanese.dto.RegisterEntity;
+
+import javax.servlet.http.HttpServletRequest;
 import java.lang.reflect.Field;
 
 /**
@@ -16,6 +19,16 @@ public class EstimateObjectUtil {
             return  true;
         }
         return false;
+    }
+
+    public static boolean verifyRegisterEntity(RegisterEntity registerEntity, HttpServletRequest request){
+        String password=registerEntity.getPassword();
+        String verifyCode= (String) request.getSession().getAttribute("verifycode");
+        if (password.equals(registerEntity.getRepassword())&&verifyCode.equals(registerEntity.getVercode())) {
+            return true;
+        }
+        return false;
+
     }
 
 }
