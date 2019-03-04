@@ -13,4 +13,9 @@ public class HomeController {
     private String goToCurrentPage(){
         return "index";
     }
+
+    @RequestMapping("loginedhome")
+    private String goToLoginedHomePage(){
+        return "user/loginedhome";
+    }
 }

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by Administrator on 2018/12/14 0014.
+ *
  */
 @Controller
 @RequestMapping("havanese/user")
@@ -27,6 +28,7 @@ public class RegisterController {
 
     @RequestMapping("quickRegister")
     private String register(RegisterEntity registerEntity, HttpServletRequest request){
+        System.out.print(registerEntity.toString());
         boolean isSuccessed=false;
         String jumpPath=null;
         if (EstimateObjectUtil.estimateObject(registerEntity)&&EstimateObjectUtil.verifyRegisterEntity(registerEntity,request)) {
