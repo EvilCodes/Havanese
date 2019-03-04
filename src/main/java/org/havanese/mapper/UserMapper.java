@@ -9,7 +9,7 @@ import org.havanese.pojo.User;
  */
 @Mapper
 public interface UserMapper {
-    @Select("select * from user where email=#{emailAddress}")
+    @Select("select * from t_user_msg where email=#{emailAddress}")
     User findUserById(@Param("emailAddress") String emailAddress);
 
 

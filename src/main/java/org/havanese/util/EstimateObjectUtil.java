@@ -1,5 +1,6 @@
 package org.havanese.util;
 
+import org.havanese.dto.LoginEntity;
 import org.havanese.dto.RegisterEntity;
 
 import javax.servlet.http.HttpServletRequest;
@@ -30,5 +31,17 @@ public class EstimateObjectUtil {
         return false;
 
     }
+
+    public static boolean verifyLoginedEntity(LoginEntity loginEntity, HttpServletRequest request) {
+        String verifycode=loginEntity.getVerifiedCode();
+        String sourceCode= (String) request.getSession().getAttribute("verifycode");
+        if (sourceCode.equals(verifycode)) {
+            return true;
+        }
+        return false;
+
+    }
+
+
 
 }

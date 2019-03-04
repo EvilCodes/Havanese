@@ -6,16 +6,16 @@ import java.io.Serializable;
  * Created by Administrator on 2019/3/4 0004.
  */
 public class LoginEntity implements Serializable{
-    private String emainAddress;
+    private String emailAddress;
     private String password;
     private String verifiedCode;
 
-    public String getEmainAddress() {
-        return emainAddress;
+    public String getEmailAddress() {
+        return emailAddress;
     }
 
-    public void setEmainAddress(String emainAddress) {
-        this.emainAddress = emainAddress;
+    public void setEmailAddress(String emailAddress) {
+        this.emailAddress = emailAddress;
     }
 
     public String getPassword() {
@@ -37,7 +37,7 @@ public class LoginEntity implements Serializable{
     @Override
     public String toString() {
         return "LoginEntity{" +
-                "emainAddress='" + emainAddress + '\'' +
+                "emainAddress='" + emailAddress + '\'' +
                 ", password='" + password + '\'' +
                 ", verifiedCode='" + verifiedCode + '\'' +
                 '}';
