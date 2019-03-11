@@ -14,6 +14,13 @@ public class ShareMsgController {
         return "jie/sharemsg";
     }
 
+    @RequestMapping("loginedSharemsg")
+    private String goToLoginedCurrentPage(){
+
+        return "jie/logined/sharemsg";
+
+    }
+
 
     @RequestMapping("sharemsg/unliquidated")
     private  String  goToUnliquidated(){

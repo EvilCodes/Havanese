@@ -14,4 +14,11 @@ public class DynamicMsgController {
         return "jie/dynamic";
     }
 
+    @RequestMapping()
+    private String goToLoginedCurrent(){
+
+
+        return "jie/logined/dynamic";
+    }
+
 }

@@ -13,4 +13,9 @@ public class CommonMsgController {
     private String goToCurrentPage(){
         return "jie/announcement";
     }
+
+    @RequestMapping("loginedAnnouncement")
+    private String goToLoginedCurrentPage(){
+        return "jie/logined/announcement";
+    }
 }
