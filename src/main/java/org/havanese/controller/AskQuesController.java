@@ -18,6 +18,11 @@ public class AskQuesController {
         return "jie/askques";
     }
 
+    @RequestMapping("loginedAskques")
+    private String goToLoginedCurrentPage(){
+        return "jie/logined/askques";
+    }
+
     @RequestMapping("askques/essence")
     private String goToEssencePage(){
         pathDesc = SubPageJumping.essencePageDesc(BASE_DESC);
