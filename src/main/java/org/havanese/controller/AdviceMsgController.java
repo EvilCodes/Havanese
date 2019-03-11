@@ -13,4 +13,10 @@ public class AdviceMsgController {
     private String goToCurrentPage(){
         return "jie/advice";
     }
+
+    @RequestMapping("loginedAdvice")
+    private String goToLoginedCurrentPage(){
+
+        return "jie/logined/advice";
+    }
 }
