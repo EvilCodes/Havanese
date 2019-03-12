@@ -28,6 +28,7 @@ public class LoginController {
         String jumpPath=null;
         boolean isSuccessed=loginAndRegister.login(loginEntity,request);
         if (isSuccessed) {
+            request.getSession().setAttribute("loginStatus",true);
             jumpPath="redirect:../loginedhome";
         }
         System.out.print("jumpPath="+jumpPath);
