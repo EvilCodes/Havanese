@@ -16,6 +16,6 @@ public class DiscussMsgController {
 
     @RequestMapping("loginedDiscuss")
     private String goToLoginedCurrentPage(){
-        return "jie/logined/disscuss";
+        return "jie/logined/discuss";
     }
 }
