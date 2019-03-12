@@ -8,20 +8,29 @@ public class SubPageJumping {
 
     public final static String BASE_PATH_DESC = "subtabpage";
 
-    public static String essencePageDesc(String baseDesc){
+    public static String essencePageDesc(String baseDesc,boolean isLogined){
         String pathDesc=null;
 
         if (baseDesc != null && !baseDesc.equals("")) {
+            if (!isLogined)
             pathDesc = BASE_PATH_DESC + "/" + baseDesc + "/" + "essence";
+            else{
+                pathDesc = BASE_PATH_DESC + "/" + "logined" + "/" + "essence";
+            }
         }
         return pathDesc;
     }
 
-    public static String payamountPageDesc(String baseDesc){
+    public static String payamountPageDesc(String baseDesc,boolean isLogined){
         String pathDesc=null;
         if (baseDesc != null && !baseDesc.equals("")) {
-            pathDesc = BASE_PATH_DESC + "/" +
-                    baseDesc + "/" + "payamount";
+            if (!isLogined){
+                pathDesc = BASE_PATH_DESC + "/" +
+                        baseDesc + "/" + "payamount";
+            } else{
+                pathDesc = BASE_PATH_DESC + "/" + "logined" + "/" + "payamount";
+
+            }
 
         }
         return pathDesc;
@@ -29,20 +38,30 @@ public class SubPageJumping {
     }
 
 
-    public static String synthesisPageDesc(String baseDesc){
+    public static String synthesisPageDesc(String baseDesc,boolean isLogined){
         String pathDesc=null;
         if (baseDesc != null && !baseDesc.equals("")) {
-            pathDesc = BASE_PATH_DESC + "/" + baseDesc + "/" +
-                    "synthesis";
+            if (!isLogined) {
+                pathDesc = BASE_PATH_DESC + "/" + baseDesc + "/" +
+                        "synthesis";
+            } else {
+                pathDesc = BASE_PATH_DESC + "/" + "logined" + baseDesc + "/" + "synthesis";
+            }
+
         }
         return pathDesc;
     }
 
 
-    public static String unliquidatedPageDesc(String baseDesc){
+    public static String unliquidatedPageDesc(String baseDesc,boolean isLogined){
         String pathDesc=null;
         if (null != baseDesc && !"".equals(baseDesc)) {
-            pathDesc = BASE_PATH_DESC + "/" + baseDesc + "/" + "unliquidated";
+            if (!isLogined) {
+                pathDesc = BASE_PATH_DESC + "/" + baseDesc + "/" + "unliquidated";
+            } else {
+                pathDesc = BASE_PATH_DESC + "/" + "logined" + baseDesc + "/" + "unliquidated";
+            }
+
         }
         return pathDesc;
 
