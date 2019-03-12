@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("havanese/common")
 public class AdviceMsgController {
-    private String BASE_DESC = "advice";
+    private static final String BASE_DESC = "advice";
     private String pathDesc = null;
     @RequestMapping("advice")
     private String goToCurrentPage(){
