@@ -25,23 +25,23 @@ public class AskQuesController {
 
     @RequestMapping("askques/essence")
     private String goToEssencePage(){
-        pathDesc = SubPageJumping.essencePageDesc(BASE_DESC);
+        pathDesc = SubPageJumping.essencePageDesc(BASE_DESC,false);
         return pathDesc;
     }
 
     @RequestMapping("askques/payamount")
     private String goToPayamountPage(){
-        pathDesc = SubPageJumping.payamountPageDesc(BASE_DESC);
+        pathDesc = SubPageJumping.payamountPageDesc(BASE_DESC,false);
         return pathDesc;
     }
     @RequestMapping("askques/synthesis")
     private String goToSynthesisPage(){
-        pathDesc = SubPageJumping.synthesisPageDesc(BASE_DESC);
+        pathDesc = SubPageJumping.synthesisPageDesc(BASE_DESC,false);
         return pathDesc;
     }
     @RequestMapping("askques/unliquidated")
     private String goToUnliquidatedPage(){
-        pathDesc = SubPageJumping.unliquidatedPageDesc(BASE_DESC);
+        pathDesc = SubPageJumping.unliquidatedPageDesc(BASE_DESC,false);
         return pathDesc;
     }
 
