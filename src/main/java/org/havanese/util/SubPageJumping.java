@@ -15,7 +15,7 @@ public class SubPageJumping {
             if (!isLogined)
             pathDesc = BASE_PATH_DESC + "/" + baseDesc + "/" + "essence";
             else{
-                pathDesc = BASE_PATH_DESC + "/" + "logined" + "/" + "essence";
+                pathDesc = BASE_PATH_DESC + "/" + "logined" + "/" + baseDesc+"/essence";
             }
         }
         return pathDesc;
@@ -28,7 +28,7 @@ public class SubPageJumping {
                 pathDesc = BASE_PATH_DESC + "/" +
                         baseDesc + "/" + "payamount";
             } else{
-                pathDesc = BASE_PATH_DESC + "/" + "logined" + "/" + "payamount";
+                pathDesc = BASE_PATH_DESC + "/" + "logined" + "/" + baseDesc+"/payamount";
 
             }
 
@@ -45,7 +45,7 @@ public class SubPageJumping {
                 pathDesc = BASE_PATH_DESC + "/" + baseDesc + "/" +
                         "synthesis";
             } else {
-                pathDesc = BASE_PATH_DESC + "/" + "logined" + baseDesc + "/" + "synthesis";
+                pathDesc = BASE_PATH_DESC + "/" + "logined/" + baseDesc + "/" +"synthesis";
             }
 
         }
@@ -59,7 +59,7 @@ public class SubPageJumping {
             if (!isLogined) {
                 pathDesc = BASE_PATH_DESC + "/" + baseDesc + "/" + "unliquidated";
             } else {
-                pathDesc = BASE_PATH_DESC + "/" + "logined" + baseDesc + "/" + "unliquidated";
+                pathDesc = BASE_PATH_DESC + "/" + "logined" + "/"+baseDesc + "/" +"unliquidated";
             }
 
         }

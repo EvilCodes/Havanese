@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class AskQuesController {
     private static final String BASE_DESC = "askques";
     private String pathDesc;
+    private boolean loginStatus;
 
     @RequestMapping("askques")
     private String goToCurrentPage(){
@@ -21,6 +22,28 @@ public class AskQuesController {
     @RequestMapping("loginedAskques")
     private String goToLoginedCurrentPage(){
         return "jie/logined/askques";
+    }
+
+    @RequestMapping("loginedAskques/essence")
+    private String goToLoginedEssencePage(){
+        pathDesc = SubPageJumping.essencePageDesc(BASE_DESC,true);
+        return pathDesc;
+    }
+
+    @RequestMapping("loginedAskques/payamount")
+    private String goToLoginedPayamountPage(){
+        pathDesc = SubPageJumping.payamountPageDesc(BASE_DESC,true);
+        return pathDesc;
+    }
+    @RequestMapping("loginedAskques/synthesis")
+    private String goToLoginedSynthesisPage(){
+        pathDesc = SubPageJumping.synthesisPageDesc(BASE_DESC,true);
+        return pathDesc;
+    }
+    @RequestMapping("loginedAskques/unliquidated")
+    private String goToLoginedUnliquidatedPage(){
+        pathDesc = SubPageJumping.unliquidatedPageDesc(BASE_DESC,true);
+        return pathDesc;
     }
 
     @RequestMapping("askques/essence")
